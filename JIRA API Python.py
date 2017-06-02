@@ -92,11 +92,22 @@ def networkTest(fromUrl):
 
 
 #Pass in vars/data for func logStory
-toUrl = "https://user.atlassian.net/rest/api/2/issue/"
-loginCred  =("login", "password")
-fromUrl = "https://techreport.com"
-mySummary = "REST test 1 from windows."
-myDesc = "first attempt at getting a POST to work"
+user=input("Input Atlassian Cloud Username - ")
+toUrl = "https://"+str(user)+".atlassian.net/rest/api/2/issue/"
+
+password=input("Input Atlassian Cloud Password - ")
+loginCred  =(str(user), str(password))
+
+url=input("Input Test Website URL")
+fromUrl = str(url)
+
+summary=input("Input summary for Atlassian Cloud issue - ")
+mySummary = str(summary)
+
+desc=input("Input description for Atlassian Cloud issue - ")
+myDesc = str(desc)
+
+
 projectName = "TEST"
 
 #Data for func logComment
